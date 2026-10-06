@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mobile Mechanic Perth | Mobile Car Repairs & Servicing</title>
+  <meta name="description" content="Mobile Mechanic Perth provides convenient mobile vehicle servicing, repairs, diagnostics, brake repairs, battery replacement and roadside assistance across Perth.">
+
+  <style>
+    :root {
+      --yellow: #f5c400;
+      --yellow-dark: #dcae00;
+      --black: #08090b;
+      --dark: #101216;
+      --dark-2: #17191e;
+      --grey: #a7abb3;
+      --white: #ffffff;
+      --border: rgba(255,255,255,.09);
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,9,11,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: -.5px;
+    }
+
+    .logo span {
+      color: var(--yellow);
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #d9d9d9;
+      font-size: .92rem;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-btn {
+      background: var(--yellow);
+      color: #08090b;
+      padding: 12px 18px;
+      border-radius: 7px;
+      font-weight: 900;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 25%, rgba(245,196,0,.13), transparent 30%),
+        linear-gradient(120deg,#08090b 20%,#111318 65%,#08090b);
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      right: -160px;
+      bottom: -200px;
+      width: 550px;
+      height: 550px;
+      border: 1px solid rgba(245,196,0,.15);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 80px rgba(245,196,0,.025),
+        0 0 0 160px rgba(245,196,0,.02);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      background: var(--yellow);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: .94;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
+    }
+
+    h1 span {
+      color: var(--yellow);
+    }
+
+    .hero p {
+      color: #c4c7cd;
+      max-width: 650px;
+      font-size: 1.12rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 7px;
+      font-weight: 900;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #08090b;
+      box-shadow: 0 10px 30px rgba(245,196,0,.16);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.2);
+      color: white;
+      background: rgba(255,255,255,.03);
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 45px;
+      color: #aaaeb5;
+      font-size: .88rem;
+    }
+
+    .hero-trust strong {
+      color: white;
+      display: block;
+      font-size: 1rem;
+    }
+
+    /* STRIP */
+
+    .strip {
+      background: var(--yellow);
+      color: #08090b;
+      padding: 17px 0;
+    }
+
+    .strip-inner {
+      display: flex;
+      justify-content: center;
+      gap: 45px;
+      flex-wrap: wrap;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: .82rem;
+      letter-spacing: .7px;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--grey);
+      font-size: 1.03rem;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #0d0f13;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 30px;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: .25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245,196,0,.4);
+    }
+
+    .service-card:after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(245,196,0,.06);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: rgba(245,196,0,.1);
+      color: var(--yellow);
+      font-size: 1.35rem;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .service-card p {
+      color: var(--grey);
+      font-size: .94rem;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 520px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(135deg,rgba(245,196,0,.1),rgba(0,0,0,.7)),
+        #16181d;
+      border: 1px solid var(--border);
+    }
+
+    /*
+      Replace this panel with a verified business photo
+      when the client's actual image is supplied.
+    */
+
+    .about-visual-content {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .about-visual-content strong {
+      display: block;
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--yellow);
+      font-weight: 900;
+    }
+
+    .about-visual-content span {
+      display: block;
+      color: #ccc;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .about-copy p {
+      color: var(--grey);
+      margin-bottom: 22px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      margin: 28px 0 32px;
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .check span {
+      width: 23px;
+      height: 23px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      color: #08090b;
+      border-radius: 50%;
+      font-size: .75rem;
+      font-weight: 900;
+    }
+
+    /* PROCESS */
+
+    .process {
+      background: #0d0f13;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #111318;
+    }
+
+    .number {
+      font-size: 3rem;
+      color: var(--yellow);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .process-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: var(--grey);
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 90px 0;
+    }
+
+    .cta-box {
+      border-radius: 18px;
+      padding: 65px;
+      background:
+        linear-gradient(110deg,rgba(245,196,0,.13),rgba(245,196,0,.025)),
+        #111318;
+      border: 1px solid rgba(245,196,0,.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .cta-box h2 {
+      max-width: 650px;
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: var(--grey);
+    }
+
+    /* FORM */
+
+    .contact {
+      background: #0d0f13;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+    }
+
+    .contact-info p {
+      color: var(--grey);
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item small {
+      display: block;
+      color: #777c85;
+      text-transform: uppercase;
+      font-size: .72rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .contact-item strong {
+      font-size: 1.05rem;
+    }
+
+    form {
+      background: #111318;
+      border: 1px solid var(--border);
+      padding: 35px;
+      border-radius: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: .8rem;
+      color: #aaa;
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      background: #090a0d;
+      color: white;
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 14px;
+      border-radius: 7px;
+      outline: none;
+      font: inherit;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--yellow);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    form .btn {
+      border: 0;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #060709;
+      padding: 55px 0 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 35px;
+    }
+
+    .footer-top p {
+      color: #777c85;
+      max-width: 450px;
+      margin-top: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      color: #999da5;
+      font-size: .9rem;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+      color: #60646c;
+      font-size: .78rem;
+    }
+
+    /* MOBILE CALL BAR */
+
+    .mobile-call {
+      display: none;
+    }
+
+    @media(max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .service-grid,
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: 350px;
+      }
+
+      .cta-box {
+        display: block;
+        padding: 45px 30px;
+      }
+
+      .cta-box .btn {
+        margin-top: 25px;
+      }
+    }
+
+    @media(max-width: 600px) {
+
+      body {
+        padding-bottom: 70px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      h1 {
+        font-size: 3.3rem;
+        letter-spacing: -2.5px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .service-grid,
+      .process-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .strip-inner {
+        gap: 12px 25px;
+        font-size: .7rem;
+      }
+
+      .footer-top {
+        display: block;
+      }
+
+      .footer-links {
+        margin-top: 25px;
+        flex-wrap: wrap;
+      }
+
+      .mobile-call {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+        background: #08090b;
+        border-top: 1px solid rgba(255,255,255,.12);
+      }
+
+      .mobile-call a {
+        padding: 18px;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      .mobile-call a:first-child {
+        background: var(--yellow);
+        color: #08090b;
+      }
+
+      form {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      MOBILE <span>MECHANIC</span> PERTH
+    </a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">Why Us</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+61424766608" class="nav-btn">Call Now</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Perth Mobile Automotive Service
+        </div>
+
+        <h1>
+          YOUR MECHANIC.<br>
+          <span>WHEREVER YOU ARE.</span>
+        </h1>
+
+        <p>
+          Professional mobile vehicle servicing, repairs and diagnostics
+          brought directly to your home, workplace or roadside location
+          across Perth.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="tel:+61424766608" class="btn btn-primary">
+            📞 Call Now
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Request a Quote
+          </a>
+
+        </div>
+
+        <div class="hero-trust">
+
+          <div>
+            <strong>Mobile Service</strong>
+            We come to you
+          </div>
+
+          <div>
+            <strong>Diagnostics</strong>
+            Find the problem
+          </div>
+
+          <div>
+            <strong>Perth Wide</strong>
+            Convenient servicing
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <div class="strip">
+
+    <div class="container strip-inner">
+
+      <span>✓ Mobile Service</span>
+      <span>✓ Vehicle Diagnostics</span>
+      <span>✓ Brake Repairs</span>
+      <span>✓ Battery Replacement</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">What We Do</div>
+
+        <h2>
+          MECHANICAL HELP,<br>
+          <span style="color:var(--yellow)">BROUGHT TO YOU.</span>
+        </h2>
+
+        <p>
+          From routine servicing to unexpected vehicle problems,
+          our mobile approach makes getting your vehicle looked after
+          easier and more convenient.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <article class="service-card">
+          <div class="icon">🔧</div>
+          <h3>Logbook Servicing</h3>
+          <p>
+            Keep your vehicle maintained with servicing designed around
+            manufacturer requirements.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon">🛑</div>
+          <h3>Brake Repairs</h3>
+          <p>
+            Brake problems diagnosed and repaired so you can get back
+            on the road with confidence.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon">🔋</div>
+          <h3>Battery Replacement</h3>
+          <p>
+            Battery diagnosis and replacement when your vehicle won't
+            start or your battery needs attention.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon">⚡</div>
+          <h3>Auto Electrical</h3>
+          <p>
+            Assistance diagnosing and resolving a range of vehicle
+            electrical problems.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon">🚗</div>
+          <h3>Roadside Assistance</h3>
+          <p>
+            When your vehicle lets you down, mobile assistance can
+            come directly to your location.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="icon">▣</div>
+          <h3>Engine Diagnostics</h3>
+          <p>
+            Diagnostic equipment helps identify what's happening
+            when your vehicle develops a fault.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-visual">
+
+          <!--
+            CLIENT PHOTO GOES HERE.
+
+            Once the business supplies a genuine photo,
+            replace this entire visual panel with the real image.
+          -->
+
+          <div class="about-visual-content">
+
+            <div>
+              <strong>24/7*</strong>
+              <span>Convenient mobile automotive support</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <div class="eyebrow">
+            Why Go Mobile?
+          </div>
+
+          <h2>
+            YOUR CAR DOESN'T NEED
+            TO GO TO THE WORKSHOP.
+          </h2>
+
+          <p>
+            A mobile mechanic brings the service to you. That means
+            less time travelling to a workshop and more convenience
+            when your vehicle needs attention.
+          </p>
+
+          <p>
+            Whether you're at home, at work or dealing with a vehicle
+            problem on the road, mobile servicing can make the process
+            significantly easier.
+          </p>
+
+          <div class="check-list">
+
+            <div class="check">
+              <span>✓</span>
+              Convenient mobile service
+            </div>
+
+            <div class="check">
+              <span>✓</span>
+              Vehicle diagnostics
+            </div>
+
+            <div class="check">
+              <span>✓</span>
+              Routine servicing & repairs
+            </div>
+
+            <div class="check">
+              <span>✓</span>
+              Roadside assistance
+            </div>
+
+          </div>
+
+          <a href="#contact" class="btn btn-primary">
+            Get a Quote
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section class="process" id="process">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">Simple Process</div>
+
+        <h2>
+          GET BACK ON THE ROAD
+          <span style="color:var(--yellow)">WITHOUT THE HASSLE.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="number">01</div>
+
+          <h3>Tell Us What's Wrong</h3>
+
+          <p>
+            Give us a call or send through your enquiry and
+            explain what's happening with your vehicle.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">02</div>
+
+          <h3>We Come To You</h3>
+
+          <p>
+            Arrange a convenient location and have your vehicle
+            assessed without needing to organise a workshop visit.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">03</div>
+
+          <h3>Get Moving Again</h3>
+
+          <p>
+            Once the issue has been diagnosed, the next steps
+            can be discussed with you.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="c
